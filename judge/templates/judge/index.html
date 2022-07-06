@@ -1,0 +1,9 @@
+{% if problems_list %}
+    <ol>
+        {% for problem in problems_list %}
+            <li><a href="{% url 'judge:problem_detail' problem.id %}"></a></li>
+        {%  endfor %}
+    </ol>
+{% else %}
+    <p>No problems are available</p>
+{%  endif %}

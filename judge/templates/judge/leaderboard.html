@@ -1,0 +1,9 @@
+{% if solutions %}
+    <ul>
+        {% for solution in solutions %}
+            <p>{{solution.problem.name}} - {{solution.verdict}} - {{solution.submitted_at}}</p>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No data available.</p>
+{% endif %}
