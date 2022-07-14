@@ -1,5 +1,5 @@
 <h1 align="center">{{problem.name}}</h1>
-<p>{{problem.problem_statement}}</p>
+<p>{{problem.problem_statment}}</p>
 
 <form action="{% url 'judge:submit' problem.id %}" enctype="multipart/form-data" method="post">
 {% csrf_token %}
@@ -7,6 +7,9 @@
         <h3 align = 'center'>Submit your code here</h3>
         <div align = 'center'>
             <input type="file" id="solution" name="solution">
+            <h2>Or</h2>
+            <textarea id="solution" name="solution" rows="25" cols="110"></textarea>
+            <br/><br/>
             <input type="submit" value="Submit">
         </div>
     </fieldset>
